@@ -1,4 +1,4 @@
- 
+// Víctor D. 2017 
 var app = {
 	inicio: function() {
 		this.iniciaFastClick();
@@ -18,7 +18,7 @@ var app = {
 		// 'L' hace referencia a un objeto de la librería leaflet.js
 		var miMapa = L.map('map').setView([position.coords.latitude, position.coords.longitude], 13);
 
-		L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmljdG9yZCIsImEiOiJjaXh1YXgzcGswMDcyMzNueTI4dW50NDNvIn0.E27YTbzLI4PyJrXzM7pL4g', {
+		L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZmVybWFsZGl0byIsImEiOiJjaXh5aXR1eWYwMDRlMnFsbTEwMTRkOGFuIn0.wZnsLBFowhePdGLJjX575Q', {
       		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 		    maxZoom: 18
     	}).addTo(miMapa);
@@ -36,7 +36,7 @@ var app = {
 
 
     pintaMarcador: function(latlng, texto, mapa) {
-    	var marcador =  L.marker(latlng).addTo(mapa);
+    	var marcador = L.marker(latlng).addTo(mapa);
     	marcador.bindPopup(texto).openPopup();
     },
 
@@ -58,3 +58,4 @@ if ('addEventListener' in document) {
 		app.dispositivoListo();	
 	}, false);
 }
+
